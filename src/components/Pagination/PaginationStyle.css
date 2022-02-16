@@ -1,0 +1,43 @@
+.pagination {
+    display: flex;
+    margin: 3rem;
+    color: greenyellow;
+}
+
+.pagination-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+    height: 3rem;
+    width: 7rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+
+.pagination-btn:hover {
+    cursor: pointer;
+}
+
+.pagination-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 50px;
+    background: red;
+    margin: 5px;
+    border-radius: 10px;
+    color: yellow;
+}
+
+.pagination-pages.active-page {
+    background: hotpink;
+    color: mediumpurple;
+
+}
+
+.pagination-pages:hover {
+    cursor: pointer;
+}

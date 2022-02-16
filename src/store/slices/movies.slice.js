@@ -14,8 +14,10 @@ export const getAllMovies = createAsyncThunk(
 
 const initialState = {
     moviesArr: [],
-    page: 1,
-    status: null
+    status: null,
+    error: null,
+    currentPage: 1,
+    totalMoviesPage: 0,
 };
 
 const moviesSlice = createSlice({
@@ -25,12 +27,14 @@ const moviesSlice = createSlice({
     extraReducers: {
         [getAllMovies.pending]: (state, action) => {
             state.status = 'Loading...'
+            state.error = null;
 
         },
         [getAllMovies.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.moviesArr = action.payload
-            state.page = action.payload.page
+            state.currentPage = action.payload.page
+            state.totalMoviesPage = action.payload.total_pages
 
         },
         [getAllMovies.rejected]: (state, action) => {
