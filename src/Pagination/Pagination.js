@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 
-import {getAllMovies} from "../../store/slices";
+import {getAllMovies} from "../store/slices";
 import './PaginationStyle.css';
 
 
@@ -35,7 +35,7 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
 
     const onPageChanged = (page) => {
         if (pageChange === getAllMovies) {
-            dispatch(pageChange(page));
+            dispatch(pageChange({page}));
         }
     };
 

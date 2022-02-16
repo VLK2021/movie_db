@@ -2,7 +2,8 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 import {getAllMovies} from "../../store/slices";
-import {Pagination} from "../../components/Pagination/Pagination";
+import {Pagination} from "../../Pagination/Pagination";
+import "./MoviesList.css";
 
 const MoviesList = () => {
 
@@ -19,15 +20,13 @@ const MoviesList = () => {
 
     return (
         <div className="moviesList">
+            {error && <h1>{error}</h1>}
+
             <div className="moviesList-movies">
                 {results && results.map(mov => <div key={mov.id}>{mov.original_title}</div>)}
+            </div>
 
                 <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllMovies}/>
-            </div>
-
-            <div>
-
-            </div>
         </div>
     );
 };

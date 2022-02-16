@@ -1,5 +1,7 @@
 .pagination {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 3rem;
     color: greenyellow;
 }
@@ -9,10 +11,12 @@
     justify-content: center;
     align-items: center;
     background: blueviolet;
+    color: white;
+    font-weight: bold;
     height: 3rem;
     width: 7rem;
     margin: 0.5rem;
-    border-radius: 10px;
+    border-radius: 2rem;
 }
 
 
@@ -24,12 +28,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 50px;
+    height: 2rem;
+    width: 2.5rem;
     background: red;
-    margin: 5px;
-    border-radius: 10px;
-    color: yellow;
+    margin: 0.5rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 .pagination-pages.active-page {
