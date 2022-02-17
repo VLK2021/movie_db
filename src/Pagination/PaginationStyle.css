@@ -10,18 +10,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: blueviolet;
-    color: white;
+    background: var(--var-bg-btn);
+    color: var(--var-color-btn);
     font-weight: bold;
     height: 3rem;
     width: 7rem;
     margin: 0.5rem;
     border-radius: 2rem;
+    box-shadow: var(--var-box-shadov-btn);
 }
 
 
 .pagination-btn:hover {
     cursor: pointer;
+    color: yellow;
 }
 
 .pagination-pages {
@@ -30,19 +32,22 @@
     align-items: center;
     height: 2rem;
     width: 2.5rem;
-    background: red;
+    background: deepskyblue;
     margin: 0.5rem;
     border-radius: 1.5rem;
-    color: white;
+    color: black;
     font-weight: bold;
+    box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5),
+    inset 0 0 15px rgba(0, 0, 0, .2);
 }
 
 .pagination-pages.active-page {
-    background: hotpink;
-    color: mediumpurple;
-
+    background: #787272;
+    color: deepskyblue;
 }
 
 .pagination-pages:hover {
     cursor: pointer;
+    color: yellow;
 }

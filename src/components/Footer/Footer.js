@@ -6,7 +6,7 @@ import './FooterStyle.css';
 const Footer = () => {
     return (
         <div className="footer">
-           footer
+            <h4>Copyright © 2022 Volodymyr Kostiuk.</h4>
         </div>
     );
 };

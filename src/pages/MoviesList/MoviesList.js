@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getAllMovies} from "../../store/slices";
 import {Pagination} from "../../Pagination/Pagination";
 import "./MoviesList.css";
+import MovieCard from "../../components/MovieCard/MovieCard";
 
 const MoviesList = () => {
 
@@ -23,7 +24,7 @@ const MoviesList = () => {
             {error && <h1>{error}</h1>}
 
             <div className="moviesList-movies">
-                {results && results.map(mov => <div key={mov.id}>{mov.original_title}</div>)}
+                {results && results.map(mov => <MovieCard key={mov.id} movie={mov}/>)}
             </div>
 
                 <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllMovies}/>

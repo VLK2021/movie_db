@@ -1,4 +1,5 @@
 .layout-outlet {
-    min-height:35rem;
-
+    min-height:100vh;
+    padding-top: 3rem;
+    box-sizing: border-box;
 }

@@ -1,8 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --var-bg-header: #787272;
+    --var-header-color: deepskyblue;
+    --var-box-shedow-header: 0 0 0 2px #3e3e3e, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px deepskyblue,
+    inset 0 0 15px rgba(0, 0, 0, .2);
+    height: 3rem;
+    --var-bg-footer: #787272;
+    --var-footer-color: deepskyblue;
+    --var-bg-btn: #787272;
+    --var-color-btn: deepskyblue;
+    --var-box-shadov-btn: 0 0 0 4px #3e3e3e, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5),
+    inset 0 0 15px rgba(0, 0, 0, .2);
+}
+
 body {
-    background-image: url("./images/background_dark_moon.jpg");
+    background: url(./images/black.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

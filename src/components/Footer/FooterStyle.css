@@ -1,5 +1,5 @@
 .footer{
     width: 100%;
-    background: gray;
-    color: white;
+    background: var(--var-bg-footer);
+    color: var(--var-footer-color);
 }
