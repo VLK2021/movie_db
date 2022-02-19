@@ -5,6 +5,7 @@ import {getAllMovies} from "../../store/slices";
 import {Pagination} from "../../Pagination/Pagination";
 import "./MoviesList.css";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import {Outlet} from "react-router-dom";
 
 const MoviesList = () => {
 
@@ -28,6 +29,10 @@ const MoviesList = () => {
             </div>
 
                 <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllMovies}/>
+
+
+
+            <Outlet/>
         </div>
     );
 };

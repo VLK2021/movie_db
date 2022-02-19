@@ -1,0 +1,7 @@
+.MovieGenres{
+display: flex;
+}
+
+.MovieGenres-genres{
+    color: white;
+}
