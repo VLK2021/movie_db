@@ -8,6 +8,7 @@ import './App.css';
 import MovieGenres from "./pages/MovieGenres/MovieGenres";
 import GenresFilmsList from "./pages/GenresFilmsList/GenresFilmsList";
 import DefoultPage from "./components/DefoultPage/DefoultPage";
+import SearchFilms from "./pages/SearchFilms/SearchFilms";
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
                         <Route index element={<DefoultPage/>}/>
                         <Route path={'/genres/:id'} element={<GenresFilmsList/>}/>
                         <Route path={'/genres/:id/:id'} element={<MovieDetails/>}/>
-                    </Route>
+                </Route>
+                    <Route path={'/search'} element={<SearchFilms/>}/>
                 </Route>
             </Routes>
         </div>
