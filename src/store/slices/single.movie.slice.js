@@ -15,14 +15,12 @@ export const getSingleMovie = createAsyncThunk(
         }
     });
 
-
 export const getTrailer = createAsyncThunk(
     'singleMovieSlice/getTrailer',
 
     async ({id}, {rejectWithValue}) => {
         try {
             const trailer = await moviesService.getTrailer(id);
-            console.log(trailer);
             return trailer
         } catch (e) {
             return rejectWithValue(e.message);

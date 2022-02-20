@@ -5,12 +5,14 @@ import {moviesService} from "../../services";
 
 export const getAllGenres = createAsyncThunk(
     'genresSlice/getAllGenres',
-
-    async () => {
+    async (_, {rejectWithValue}) => {
+        try {
         const genress = await moviesService.getAllGenre()
-        console.log(genress);
         return genress
-    })
+        } catch (e) {
+            return rejectWithValue(e.message);
+        }
+    });
 
 const initialState = {
     genresArr: [],
@@ -24,7 +26,8 @@ const genresSlice = createSlice({
     reducers: {},
     extraReducers: {
         [getAllGenres.pending]: (state, action) => {
-            state.status = 'pending'
+            state.status = 'Loading...'
+            state.error = null
         },
         [getAllGenres.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
@@ -32,6 +35,7 @@ const genresSlice = createSlice({
         },
         [getAllGenres.rejected]: (state, action) => {
             state.status = 'rejected'
+            state.error = action.payload
         }
     }
 });

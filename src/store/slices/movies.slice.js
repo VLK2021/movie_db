@@ -29,7 +29,7 @@ const moviesSlice = createSlice({
     extraReducers: {
         [getAllMovies.pending]: (state, action) => {
             state.status = 'Loading...'
-            state.error = null;
+            state.error = null
         },
         [getAllMovies.fulfilled]: (state, action) => {
             state.status = 'fulfilled'

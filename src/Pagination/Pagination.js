@@ -3,6 +3,8 @@ import {useDispatch} from "react-redux";
 
 import {getAllMovies} from "../store/slices";
 import './PaginationStyle.css';
+import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
+import {useParams} from "react-router-dom";
 
 
 export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
@@ -11,6 +13,7 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
     const [endPage, setEndPage] = useState(10);
 
     const dispatch = useDispatch();
+    const {id} = useParams();
 
     const pages = [];
 
@@ -37,7 +40,9 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
         if (pageChange === getAllMovies) {
             dispatch(pageChange({page}));
         }
+        dispatch(getAllGenresFilms({id, page}))
     };
+
 
     return (
         <div className="pagination">

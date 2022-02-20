@@ -27,9 +27,8 @@ const MoviesList = () => {
             <div className="moviesList-movies">
                 {results && results.map(mov => <MovieCard key={mov.id} movie={mov}/>)}
             </div>
-
-                <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllMovies}/>
-
+            <Outlet/>
+            <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllMovies}/>
 
 
             <Outlet/>

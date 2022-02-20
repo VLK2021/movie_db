@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-
+import {Outlet} from "react-router-dom";
 
 import './MovieGenresStyle.css';
 import {getAllGenres} from "../../store/slices/genres.slice";
-import {Outlet} from "react-router-dom";
+import GenreCard from "../../components/GenreCard/GenreCard";
 
 
 const MovieGenres = () => {
@@ -22,9 +22,10 @@ const MovieGenres = () => {
     return (
         <div className="MovieGenres">
             <div className='MovieGenres-genres'>
-                {genres && genres.map(value => <div key={value.id}>{value.name}</div>)}
+                {genres && genres.map(value => <GenreCard key={value.id} genres={value}/>)}
             </div>
-            <Outlet/>
+
+            <div className="MovieGenres-outlet"><Outlet/></div>
         </div>
     );
 };

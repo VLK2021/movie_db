@@ -14,7 +14,6 @@ const Navigate = () => {
                 <NavLink to={'/genres'}>
                     <button>All Genres</button>
                 </NavLink>
-                <button>Sort Films</button>
             </div>
 
             <div className="Navigate-form">

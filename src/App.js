@@ -6,6 +6,8 @@ import MoviesList from "./pages/MoviesList/MoviesList";
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import './App.css';
 import MovieGenres from "./pages/MovieGenres/MovieGenres";
+import GenresFilmsList from "./pages/GenresFilmsList/GenresFilmsList";
+import DefoultPage from "./components/DefoultPage/DefoultPage";
 
 
 function App() {
@@ -16,7 +18,11 @@ function App() {
                 <Route path={'/'} element={<Layout/>}>
                     <Route index element={<MoviesList/>}/>
                     <Route path={':id'} element={<MovieDetails/>}/>
-                    <Route path={'/genres'} element={<MovieGenres/>}/>
+                    <Route path={'/genres'} element={<MovieGenres/>}>
+                        <Route index element={<DefoultPage/>}/>
+                        <Route path={'/genres/:id'} element={<GenresFilmsList/>}/>
+                        <Route path={'/genres/:id/:id'} element={<MovieDetails/>}/>
+                    </Route>
                 </Route>
             </Routes>
         </div>

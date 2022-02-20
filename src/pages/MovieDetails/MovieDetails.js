@@ -14,7 +14,6 @@ const MovieDetails = () => {
 
 
     const {singleMovieObj} = useSelector(store => store.singleMovie);
-    // console.log(singleMovieObj);
     const {results} = useSelector(store => store.singleMovie.trailerArr);
 
 

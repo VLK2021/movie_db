@@ -1,7 +1,14 @@
-.MovieGenres{
-display: flex;
+.MovieGenres {
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.MovieGenres-genres{
-    color: white;
+.MovieGenres-genres {
+width: 25%;
+
+}
+
+.MovieGenres-outlet {
+    width: 75%;
 }
