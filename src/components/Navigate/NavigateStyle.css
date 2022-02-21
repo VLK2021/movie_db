@@ -1,4 +1,4 @@
-.Navigate{
+.Navigate {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,10 +10,23 @@
     align-items: flex-end;
     padding-top: 5rem;
     box-sizing: border-box;
-    color: white;
+
 }
 
-.Navigate-form{
+.navigate-btn button {
+    height: 2rem;
+    width: 8rem;
+    color: var(--var-color-btn);
+    background:  var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.Navigate-form {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -21,4 +34,16 @@
     box-sizing: border-box;
     color: white;
     margin-left: 10rem;
+}
+
+
+.Navigate-form  input {
+    background: transparent var(--var-bg-btn);
+    width: 12rem;
+    height: 2rem;
+    border-radius: 1rem;
+    color: var(--var-color-btn);
+    box-shadow: var(--var-box-shedow-header);
+    padding: 0 0 0 1rem;
+
 }

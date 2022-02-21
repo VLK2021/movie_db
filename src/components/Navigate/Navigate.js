@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 
 
 import './NavigateStyle.css'
-import {useDispatch, useSelector} from "react-redux";
 import {getAllSearch} from "../../store/slices/search.slice";
 
 
@@ -11,14 +11,15 @@ const Navigate = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const page = useSelector(store=>store.searchFilm.page);
+    const page = useSelector(store => store.searchFilm.page);
 
 
     const onsubmitForm = (e) => {
         e.preventDefault()
         let word = e.target.nameFilm.value
-        navigate('/search')
-        dispatch(getAllSearch({word,page}))
+        navigate(`/search/${word}`)
+        dispatch(getAllSearch({word, page}))
+        e.target.nameFilm.value = '';
     }
 
     return (
@@ -34,12 +35,11 @@ const Navigate = () => {
 
             <div className="Navigate-form">
                 <form onSubmit={onsubmitForm} name="search">
-                    <input type="text" name="nameFilm" placeholder="Searsh..."/>
-                    <button>Search</button>
+                    <input type="text" name="nameFilm" placeholder="Searsh Films..."/>
                 </form>
             </div>
         </div>
-    );
+    )
 };
 
 export default Navigate;

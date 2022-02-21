@@ -18,7 +18,6 @@ const initialState = {
     searchArr: [],
     currentPage: 1,
     totalMoviesPage: 0,
-    word: '',
     error: null,
     status: null,
 }
@@ -36,7 +35,6 @@ const searchSlice = createSlice({
             state.status = 'fulfilled...'
             state.searchArr = action.payload
             state.currentPage = action.payload.page
-            state.word = action.payload.word
             state.totalMoviesPage = action.payload.total_pages
         },
         [getAllSearch.rejected]: (state, action) => {

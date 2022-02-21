@@ -1,11 +1,11 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-
-import {getAllMovies} from "../store/slices";
-import './PaginationStyle.css';
-import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
 import {useParams} from "react-router-dom";
 
+import {getAllMovies} from "../store/slices";
+import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
+import {getAllSearch} from "../store/slices/search.slice";
+import './PaginationStyle.css';
 
 
 export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
@@ -15,11 +15,7 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
 
     const dispatch = useDispatch();
     const {id} = useParams();
-
-
-    // const word = useSelector(store=>store.searchFilm.word);
-
-
+    const {word} = useParams();
 
     const pages = [];
 
@@ -45,15 +41,14 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
     const onPageChanged = (page) => {
         if (pageChange === getAllMovies) {
             dispatch(pageChange({page}));
-        }if(pageChange === getAllGenresFilms) {
-            dispatch(getAllGenresFilms({id, page}))
         }
-
-
-
-
+        if (pageChange === getAllGenresFilms) {
+            dispatch(pageChange({id, page}))
+        }
+        if (pageChange === getAllSearch) {
+            dispatch(pageChange({word, page}))
+        }
     };
-
 
     return (
         <div className="pagination">

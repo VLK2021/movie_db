@@ -11,6 +11,7 @@ import DefoultPage from "./components/DefoultPage/DefoultPage";
 import SearchFilms from "./pages/SearchFilms/SearchFilms";
 
 
+
 function App() {
 
     return (
@@ -23,8 +24,9 @@ function App() {
                         <Route index element={<DefoultPage/>}/>
                         <Route path={'/genres/:id'} element={<GenresFilmsList/>}/>
                         <Route path={'/genres/:id/:id'} element={<MovieDetails/>}/>
-                </Route>
-                    <Route path={'/search'} element={<SearchFilms/>}/>
+                    </Route>
+                    <Route path={'/search/:word'} element={<SearchFilms/>}/>
+                    <Route path={'/search/:word/:id'} element={<MovieDetails/>}/>
                 </Route>
             </Routes>
         </div>

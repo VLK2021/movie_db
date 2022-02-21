@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            header
+            CINEMAX
         </div>
     );
 };

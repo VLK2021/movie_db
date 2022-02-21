@@ -2,16 +2,16 @@ import React from 'react';
 import {useSelector} from "react-redux";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
-import {Pagination} from "../../Pagination/Pagination";
 import {getAllSearch} from "../../store/slices/search.slice";
+import {Pagination} from "../../Pagination/Pagination";
 import './SearchFilmsStyle.css';
+// import {Outlet} from "react-router-dom";
 
 
 const SearchFilms = () => {
 
- const {searchArr, status, error, currentPage, totalMoviesPage}= useSelector(store=>store.searchFilm);
-
- const{results} = searchArr;
+    const {searchArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.searchFilm);
+    const {results} = searchArr;
 
     return (
         <div className="searchFilms">
@@ -23,9 +23,10 @@ const SearchFilms = () => {
                 }
             </div>
 
-            {/*<Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllSearch}/>*/}
+            <Pagination totalMoviesPage={totalMoviesPage} currentPage={currentPage} pageChange={getAllSearch}/>
+            {/*<Outlet/>*/}
         </div>
-    );
+    )
 };
 
 export default SearchFilms;
