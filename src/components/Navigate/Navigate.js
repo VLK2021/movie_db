@@ -22,8 +22,26 @@ const Navigate = () => {
         e.target.nameFilm.value = '';
     }
 
+    // const toggle = (checked) => {
+    //     if (checked){
+    //         document.body.classList.add('black');
+    //     }
+    //     if(!checked){
+    //         document.body.classList.add('light');
+    //     }
+    //
+    // };
+
+
+
     return (
         <div className='Navigate'>
+
+            {/*<input type="checkbox" onClick={event => toggle(event.target.value)}/>*/}
+
+
+
+
             <div className="navigate-btn">
                 <NavLink to={'/'}>
                     <button>Home</button>

@@ -6,6 +6,7 @@ import {getAllMovies} from "../store/slices";
 import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
 import {getAllSearch} from "../store/slices/search.slice";
 import './PaginationStyle.css';
+import {getAllUpcoming} from "../store/slices/upcoming.slice";
 
 
 export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
@@ -47,6 +48,9 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
         }
         if (pageChange === getAllSearch) {
             dispatch(pageChange({word, page}))
+        }
+        if (pageChange === getAllUpcoming) {
+            dispatch(pageChange({page}))
         }
     };
 

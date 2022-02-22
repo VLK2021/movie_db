@@ -3,13 +3,11 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {moviesService} from "../../services";
 
 
-
 export const getAllGenresFilms = createAsyncThunk(
     'genresFilmSlice/getAllGenresFilms',
-    async ({id,page}, {rejectWithValue}) =>{
+    async ({id, page}, {rejectWithValue}) => {
         try {
             const genresFilmsS = await moviesService.getAllGenreFilms(id, page)
-            console.log(genresFilmsS);
             return genresFilmsS
         } catch (e) {
             return rejectWithValue(e.message)
@@ -28,7 +26,7 @@ const initialState = {
 const genresFilmSlice = createSlice({
     name: 'genresFilmSlice',
     initialState,
-    reducers:{},
+    reducers: {},
     extraReducers: {
         [getAllGenresFilms.pending]: (state, action) => {
             state.status = 'Loading...'
