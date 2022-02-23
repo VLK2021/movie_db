@@ -9,7 +9,6 @@
     --var-box-shedow-header: 0 0 0 2px #3e3e3e, 0 0 0 5px #3e3e3e,
     inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px deepskyblue,
     inset 0 0 15px rgba(0, 0, 0, .2);
-    height: 3rem;
     --var-bg-footer: #787272;
     --var-footer-color: deepskyblue;
     --var-bg-btn: #787272;
@@ -18,10 +17,35 @@
     inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5),
     inset 0 0 15px rgba(0, 0, 0, .2);
     --var-a-hover: yellow;
+    --var-color-a: white;
+
+    --var-bg-all: url(./images/black.jpg) no-repeat center fixed;
 }
 
+
+.lightTherm {
+    --var-bg-header: #22254b;
+    --var-bg-footer: #373b69;
+    --var-footer-color: deeppink;
+    --var-box-shedow-header: 0 0 0 2px #3e3e3e, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px deepskyblue,
+    inset 0 0 15px rgba(0, 0, 0, .2);
+    --var-header-color: deeppink;
+    --var-bg-all: #22254b;
+    --var-bg-btn: #373b69;
+}
+
+/*--var-body-bg: #22254b;*/
+/*--var-body-fc: white;*/
+/*--var-heder-bg:#22254b;*/
+/*--var-footer-bg: #373b69;*/
+/*--var-a-color: deeppink;*/
+/*--var-title-color: deeppink;*/
+/*--var-movi_title-color: deeppink*/
+
+
 body {
-    background: url(./images/black.jpg) no-repeat center fixed;
+    background: var(--var-bg-all);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

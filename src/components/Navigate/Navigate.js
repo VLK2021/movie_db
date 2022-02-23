@@ -22,25 +22,19 @@ const Navigate = () => {
         e.target.nameFilm.value = '';
     }
 
-    // const toggle = (checked) => {
-    //     if (checked){
-    //         document.body.classList.add('black');
-    //     }
-    //     if(!checked){
-    //         document.body.classList.add('light');
-    //     }
-    //
-    // };
-
+    const onchange = () => {
+        document.body.classList.toggle("lightTherm")
+    }
 
 
     return (
         <div className='Navigate'>
 
-            {/*<input type="checkbox" onClick={event => toggle(event.target.value)}/>*/}
-
-
-
+            <div className="form-check form-switch toggle">
+                <input className="form-check-input"
+                       type="checkbox"
+                       onChange={event => onchange(event.target.value)}/>
+            </div>
 
             <div className="navigate-btn">
                 <NavLink to={'/'}>

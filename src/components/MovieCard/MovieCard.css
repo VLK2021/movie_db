@@ -4,13 +4,15 @@
     box-shadow: var(--var-box-shedow-header);
     border-radius: 0.8rem 0.8rem 0.1rem 0.1rem;
     font-weight: bold;
-
 }
-
-
 
 .movieCard a{
     text-decoration: none;
+    color: var(--var-color-a);
+}
+
+.movieCard a:hover {
+    color: var(--var-a-hover);
 }
 
 .movieCard-img img {
