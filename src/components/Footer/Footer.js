@@ -10,7 +10,7 @@ const Footer = () => {
                 <img src={logo512} alt="logo"/>
                 <div>Reakt - Redux Toolkit</div>
             </div>
-            <h4>Copyright © 2022 Volodymyr Kostiuk.</h4>
+            <h5>Copyright © 2022 Volodymyr Kostiuk.</h5>
         </div>
     );
 };

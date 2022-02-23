@@ -12,10 +12,8 @@ const MovieDetails = () => {
     const dispatch = useDispatch();
     const {id} = useParams();
 
-
     const {singleMovieObj} = useSelector(store => store.singleMovie);
     const {results} = useSelector(store => store.singleMovie.trailerArr);
-
 
     useEffect(() => {
         dispatch(getSingleMovie({id}))
@@ -95,9 +93,9 @@ const MovieDetails = () => {
                     {results && results.map(video => <Videos key={video.id} video={video}/>)}
                 </div>
 
-                <div className="homePage"><strong className='movieDetails-info-titles'>Homepage:</strong><a href={homepage}> {homepage}</a>
+                <div className="homePage"><strong className='movieDetails-info-titles'>Homepage:</strong><a
+                    href={homepage}> {homepage}</a>
                 </div>
-
             </div>
 
             <NavLink to={-1}>

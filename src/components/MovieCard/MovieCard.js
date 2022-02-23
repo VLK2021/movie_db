@@ -6,7 +6,6 @@ import './MovieCard.css'
 
 
 const MovieCard = ({movie}) => {
-
     const {id, poster_path, original_title, vote_average} = movie;
 
     const setVoteClass = (vote) => {
@@ -24,19 +23,15 @@ const MovieCard = ({movie}) => {
         <div className="movieCard">
 
             <NavLink to={id.toString()}>
+                <div className="movieCard-img">
+                    <img src={IMG_URL + poster_path} alt="poster"/>
+                </div>
 
-
-                    <div className="movieCard-img">
-                        <img src={IMG_URL + poster_path} alt="poster"/>
-                    </div>
-
-                    <div className="movieCard-info">
-                        <div className="movieCard-info-title">{original_title}</div>
-                        <div className={`tag ${setVoteClass(vote_average)}`}>{vote_average}</div>
-                    </div>
-
+                <div className="movieCard-info">
+                    <div className="movieCard-info-title">{original_title}</div>
+                    <div className={`tag ${setVoteClass(vote_average)}`}>{vote_average}</div>
+                </div>
             </NavLink>
-
         </div>
     );
 };

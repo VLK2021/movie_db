@@ -10,7 +10,7 @@ const GenreCard = ({genres}) => {
     return (
         <div className="genreCard">
             <NavLink to={id.toString()}>
-                <h2>{name}</h2>
+                <h2 className="genreCard-name">{name}</h2>
             </NavLink>
         </div>
     );

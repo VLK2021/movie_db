@@ -29,19 +29,24 @@ const Navigate = () => {
 
     return (
         <div className='Navigate'>
-
             <div className="form-check form-switch toggle">
                 <input className="form-check-input"
                        type="checkbox"
-                       onChange={event => onchange(event.target.value)}/>
+                       onChange={event => onchange(event.target.value)}
+                />
             </div>
 
             <div className="navigate-btn">
                 <NavLink to={'/'}>
                     <button>Home</button>
                 </NavLink>
+
                 <NavLink to={'/genres'}>
                     <button>All Genres</button>
+                </NavLink>
+
+                <NavLink to={'/serials'}>
+                    <button>All Serials</button>
                 </NavLink>
             </div>
 

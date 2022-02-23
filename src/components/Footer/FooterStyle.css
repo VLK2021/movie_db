@@ -1,4 +1,4 @@
-.footer{
+.footer {
     width: 100%;
     background: var(--var-bg-footer);
     color: var(--var-footer-color);
@@ -6,20 +6,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.3rem;
     box-sizing: border-box;
     font-weight: bold;
     box-shadow: var(--var-box-shedow-header);
-    border-radius: 1rem;
 }
 
-.footer-first{
+.footer-first {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-first img{
-    width: 1.2rem;
-    height: 1.2rem;
+.footer-first img {
+    width: 1.1rem;
+    height: 1.1rem;
     margin-right: 1rem;
 }
+

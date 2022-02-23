@@ -25,6 +25,7 @@ function App() {
                     </Route>
                     <Route path={'/search/:word'} element={<SearchFilms/>}/>
                     <Route path={'/search/:word/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/serials'} element={'#'}/>
                 </Route>
             </Routes>
         </div>

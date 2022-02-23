@@ -1,11 +1,10 @@
 .MovieGenres {
     display: flex;
     justify-content: space-between;
-
 }
 
 .MovieGenres-genres {
-width: 25%;
+    width: 25%;
 
 }
 

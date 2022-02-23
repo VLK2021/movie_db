@@ -1,12 +1,12 @@
 .movieCard {
     width: 17%;
-    color: white;
+    color: var(--var-color-a);
     box-shadow: var(--var-box-shedow-header);
     border-radius: 0.8rem 0.8rem 0.1rem 0.1rem;
     font-weight: bold;
 }
 
-.movieCard a{
+.movieCard a {
     text-decoration: none;
     color: var(--var-color-a);
 }
@@ -28,20 +28,20 @@
 .movieCard-info {
     background: var(--var-bg-header);
     box-sizing: border-box;
-    height: 5rem;
+    height: 5.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .movieCard-info-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .tag {
     background: #3e3e3e;
-    padding: 0.5rem;
+    padding: 0.3rem;
     box-sizing: border-box;
 }
 
@@ -53,6 +53,6 @@
     color: orange;
 }
 
-.tag.red{
+.tag.red {
     color: red;
 }
