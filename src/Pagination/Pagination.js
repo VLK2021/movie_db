@@ -6,7 +6,7 @@ import {getAllMovies} from "../store/slices";
 import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
 import {getAllSearch} from "../store/slices/search.slice";
 import './PaginationStyle.css';
-import {getAllUpcoming} from "../store/slices/upcoming.slice";
+import {getAllNewMovies} from "../store/slices/newMovies.slice";
 
 
 export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
@@ -36,7 +36,6 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
 
     for (let i = startPage; i <= endPage; i++) {
         pages.push(i);
-
     }
 
     const onPageChanged = (page) => {
@@ -44,13 +43,13 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
             dispatch(pageChange({page}));
         }
         if (pageChange === getAllGenresFilms) {
-            dispatch(pageChange({id, page}))
+            dispatch(pageChange({id, page}));
         }
         if (pageChange === getAllSearch) {
-            dispatch(pageChange({word, page}))
+            dispatch(pageChange({word, page}));
         }
-        if (pageChange === getAllUpcoming) {
-            dispatch(pageChange({page}))
+        if (pageChange === getAllNewMovies) {
+            dispatch(pageChange({page}));
         }
     };
 

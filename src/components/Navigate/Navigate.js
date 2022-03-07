@@ -45,8 +45,8 @@ const Navigate = () => {
                     <button>All Genres</button>
                 </NavLink>
 
-                <NavLink to={'/serials'}>
-                    <button>All Serials</button>
+                <NavLink to={'/new_movies'}>
+                    <button>New Movies</button>
                 </NavLink>
             </div>
 

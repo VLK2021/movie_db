@@ -1,14 +1,14 @@
 import {Route, Routes} from "react-router-dom";
 
-
 import Layout from "./components/Layout/Layout";
 import MoviesList from "./pages/MoviesList/MoviesList";
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import './App.css';
 import MovieGenres from "./pages/MovieGenres/MovieGenres";
 import GenresFilmsList from "./pages/GenresFilmsList/GenresFilmsList";
-import DefaultPage from "./pages/DefaultPage/DefaultPage";
 import SearchFilms from "./pages/SearchFilms/SearchFilms";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import NewMovies from "./pages/NewMovies/NewMovies";
 
 
 function App() {
@@ -25,7 +25,9 @@ function App() {
                     </Route>
                     <Route path={'/search/:word'} element={<SearchFilms/>}/>
                     <Route path={'/search/:word/:id'} element={<MovieDetails/>}/>
-                    <Route path={'/serials'} element={'#'}/>
+                    <Route path={'/new_movies'} element={<NewMovies/>}/>
+                    <Route path={'/new_movies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
         </div>

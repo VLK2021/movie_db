@@ -20,7 +20,6 @@
     box-shadow: var(--var-box-shadov-btn);
 }
 
-
 .pagination-btn:hover {
     cursor: pointer;
     color: yellow;

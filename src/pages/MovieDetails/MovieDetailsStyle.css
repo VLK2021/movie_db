@@ -119,6 +119,10 @@
     margin-top: 0.4rem;
 }
 
+.movieDetails-genres-block > a{
+    text-decoration: none;
+}
+
 .movieDetails-genres {
     margin: 1.2rem;
 }

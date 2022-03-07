@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import './GenreCardStyle.css';
 
 const GenreCard = ({genres}) => {
-
     const {id, name} = genres;
 
     return (

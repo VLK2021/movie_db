@@ -83,8 +83,12 @@ const MovieDetails = () => {
             <div className='movieDetails-genres'>
                 <div className='movieDetails-color-all-first'>Genres:</div>
                 <div className='movieDetails-genres-block'>{
-                    genres && genres.map(value => <div key={value.id}
-                                                       className='movieDetails-genres-block-one'>{value.name}</div>)
+                    genres && genres.map(value =>
+                        <NavLink to={`/genres/${value.id.toString()}`}>
+                        <div key={value.id}
+                             className='movieDetails-genres-block-one'>{value.name}
+                        </div>
+                    </NavLink>)
                 }</div>
             </div>
 
