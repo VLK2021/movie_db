@@ -56,3 +56,12 @@
 .tag.red {
     color: red;
 }
+
+.movieCard-info-year{
+    background: var(--var-bg-header);
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}

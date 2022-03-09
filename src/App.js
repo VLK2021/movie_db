@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
 import MoviesList from "./pages/MoviesList/MoviesList";
@@ -20,6 +20,7 @@ function App() {
                     <Route index element={<MoviesList/>}/>
                     <Route path={':id'} element={<MovieDetails/>}/>
                     <Route path={'/genres'} element={<MovieGenres/>}>
+                        <Route index element={<Navigate to={'/genres/35'}/>}/>
                         <Route path={'/genres/:id'} element={<GenresFilmsList/>}/>
                         <Route path={'/genres/:id/:id'} element={<MovieDetails/>}/>
                     </Route>
