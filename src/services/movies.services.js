@@ -9,6 +9,5 @@ export const moviesService = {
     getAllGenre: () => axiosService.get(urls.genres).then(value => value.data),
     getAllGenreFilms: (id, page) => axiosService.get(urls.genresFilms(id, page)).then(value => value.data),
     getSearch: (word, page) => axiosService.get(urls.searchFilm(word, page)).then(value => value.data),
-    // getUpcoming: (page) => axiosService.get(urls.upcoming(page)).then(value => value.data),
     getAllNewMovies: (page) => axiosService.get(urls.getNewMovies(page)).then(value => value.data)
 }

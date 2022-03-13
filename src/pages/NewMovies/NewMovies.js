@@ -5,6 +5,7 @@ import {getAllNewMovies} from "../../store/slices/newMovies.slice";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import {Pagination} from "../../Pagination/Pagination";
 import './NewMoviesStyle.css';
+import Carousel from "../../components/CarouselBox/CarouselBox";
 
 const NewMovies = () => {
 

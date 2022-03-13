@@ -1,0 +1,19 @@
+.CarouselBox-block {
+    width: 65%;
+}
+
+.CarouselBox-block-section {
+    height: 22rem;
+}
+
+.img-b {
+    border-radius: 2rem;
+    height: 22rem;
+}
+
+.CarouselBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
