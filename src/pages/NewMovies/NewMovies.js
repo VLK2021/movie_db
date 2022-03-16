@@ -24,6 +24,8 @@ const NewMovies = () => {
         <div className="newMovies">
             {error && <h1>{error}</h1>}
 
+            <Carousel/>
+
             <div className="newMovies-movies">
                 {results && results.map(mov => <MovieCard key={mov.id} movie={mov}/>)}
             </div>

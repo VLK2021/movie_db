@@ -24,7 +24,7 @@ const MoviesList = () => {
         <div className="moviesList">
             {error && <h1>{error}</h1>}
 
-                <CarouselBox/>
+            <CarouselBox/>
 
             <div className="moviesList-movies">
                 {results && results.map(mov => <MovieCard key={mov.id} movie={mov}/>)}

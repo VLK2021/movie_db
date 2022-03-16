@@ -48,10 +48,6 @@ const Navigate = () => {
                 <NavLink to={'/new_movies'}>
                     <button>New Movies</button>
                 </NavLink>
-
-                {/*<NavLink to={'/all/serials'}>*/}
-                {/*    <button>Serials</button>*/}
-                {/*</NavLink>*/}
             </div>
 
             <div className="Navigate-form">

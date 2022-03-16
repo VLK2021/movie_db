@@ -1,5 +1,7 @@
 .CarouselBox-block {
     width: 65%;
+    border-radius: 2rem;
+    box-shadow: var(--var-box-shedow-header);
 }
 
 .CarouselBox-block-section {
@@ -16,4 +18,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-title:hover {
+    color: var(--var-a-hover);
+}
+
+.carousel-title {
+    font-weight: bold;
 }
