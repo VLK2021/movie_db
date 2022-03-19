@@ -8,22 +8,22 @@
     color: var(--var-header-color);
     border-radius: 1rem;
     box-shadow: var(--var-box-shedow-header);
-    padding: 0.2rem 3rem 0.2rem 3rem;
+    padding: 0.2rem 2rem 0.2rem 3rem;
 }
 
-.header-logo{
+.header-logo {
     width: 3.4rem;
     border-radius: 0.5rem;
     box-shadow: var(--var-box-shedow-header);
 }
 
-.header-text{
+.header-text {
     font-weight: bold;
     font-style: inherit;
-    text-shadow:  0 5px 15px deepskyblue  ;
+    text-shadow: 0 5px 15px deepskyblue;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +35,6 @@
     color: var(--var-footer-color);
 }
 
-.icons-body:hover{
+.icons-body:hover {
     color: var(--var-a-hover);
 }

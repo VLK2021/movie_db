@@ -1,4 +1,4 @@
-.searchFilms-films{
+.searchFilms-films {
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -8,4 +8,32 @@
     align-items: center;
     padding: 1rem;
     box-sizing: border-box;
+}
+
+.sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.sort-labelText {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--var-footer-color);
+}
+
+.sort-labelText > button {
+    height: 1.5rem;
+    width: 6rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-style: italic;
 }

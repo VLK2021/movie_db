@@ -25,7 +25,14 @@ const initialState = {
 const searchSlice = createSlice({
     name: 'searchSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        sortByVote_average: (state, action) => {
+            state.searchArr.results = state.searchArr.results.slice().sort((a, b) => b.vote_average - a.vote_average);
+        },
+        sortByPopularity: (state, action) => {
+            state.searchArr.results = state.searchArr.results.slice().sort((a, b) => b.popularity - a.popularity);
+        },
+    },
     extraReducers: {
         [getAllSearch.pending]: (state, action) => {
             state.status = 'Loading...'
@@ -44,5 +51,7 @@ const searchSlice = createSlice({
     }
 });
 
+export const {sortByVote_average, sortByPopularity} = searchSlice.actions;
 const searchReducer = searchSlice.reducer;
 export default searchReducer;
+
