@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 import {IMG_URL} from "../../constants";
+import fotoFilm from '../../images/fotoFilm.jpg';
 import './MovieCard.css'
 
 
@@ -24,7 +25,7 @@ const MovieCard = ({movie}) => {
 
             <NavLink to={id.toString()}>
                 <div className="movieCard-img">
-                    <img src={IMG_URL + poster_path} alt="poster"/>
+                    <img src={poster_path? IMG_URL + poster_path : fotoFilm} alt="poster"/>
                 </div>
 
                 <div>
