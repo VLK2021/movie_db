@@ -32,6 +32,12 @@ const searchSlice = createSlice({
         sortByPopularity: (state, action) => {
             state.searchArr.results = state.searchArr.results.slice().sort((a, b) => b.popularity - a.popularity);
         },
+        sortByDateM: (state, action) => {
+            state.searchArr.results = state.searchArr.results.slice().sort((a, b) => b.release_date > a.release_date ? 1 : -1);
+        },
+        sortByOriginalTitleM: (state, action) => {
+            state.searchArr.results = state.searchArr.results.slice().sort((a, b) => a.original_title > b.original_title ? 1 : -1);
+        },
     },
     extraReducers: {
         [getAllSearch.pending]: (state, action) => {
@@ -51,7 +57,7 @@ const searchSlice = createSlice({
     }
 });
 
-export const {sortByVote_average, sortByPopularity} = searchSlice.actions;
+export const {sortByVote_average, sortByPopularity, sortByDateM, sortByOriginalTitleM} = searchSlice.actions;
 const searchReducer = searchSlice.reducer;
 export default searchReducer;
 

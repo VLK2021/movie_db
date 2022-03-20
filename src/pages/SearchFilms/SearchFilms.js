@@ -2,7 +2,13 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
-import {getAllSearch, sortByVote_average, sortByPopularity} from "../../store/slices/search.slice";
+import {
+    getAllSearch,
+    sortByVote_average,
+    sortByPopularity,
+    sortByDateM,
+    sortByOriginalTitleM
+} from "../../store/slices/search.slice";
 import {Pagination} from "../../Pagination/Pagination";
 import './SearchFilmsStyle.css';
 
@@ -22,6 +28,8 @@ const SearchFilms = () => {
                 <label className="sort-labelText">Sort By:
                     <button onClick={() => dispatch(sortByVote_average(searchArr.results))}>VoteEverage</button>
                     <button onClick={() => dispatch(sortByPopularity(searchArr.results))}>Popularity</button>
+                    <button onClick={() => dispatch(sortByDateM(searchArr.results))}>Date</button>
+                    <button onClick={() => dispatch(sortByOriginalTitleM(searchArr.results))}>Title</button>
                 </label>
             </div>
 

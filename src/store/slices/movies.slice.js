@@ -32,6 +32,12 @@ const moviesSlice = createSlice({
         sortByPopularityM: (state, action) => {
             state.moviesArr.results = state.moviesArr.results.slice().sort((a, b) => b.popularity - a.popularity);
         },
+        sortByDateM: (state, action) => {
+            state.moviesArr.results = state.moviesArr.results.slice().sort((a, b) => b.release_date > a.release_date ? 1 : -1);
+        },
+        sortByOriginalTitleM: (state, action) => {
+            state.moviesArr.results = state.moviesArr.results.slice().sort((a, b) => a.original_title > b.original_title ? 1 : -1);
+        },
     },
     extraReducers: {
         [getAllMovies.pending]: (state, action) => {
@@ -51,6 +57,6 @@ const moviesSlice = createSlice({
     }
 });
 
-export const {sortByVote_averageM, sortByPopularityM} = moviesSlice.actions;
+export const {sortByVote_averageM, sortByPopularityM, sortByDateM, sortByOriginalTitleM} = moviesSlice.actions;
 const moviesReducer = moviesSlice.reducer;
 export default moviesReducer;
