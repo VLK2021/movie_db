@@ -14,7 +14,6 @@ export const getAllGenresFilms = createAsyncThunk(
         }
     });
 
-
 const initialState = {
     genreFilmsArr: [],
     status: null,
@@ -26,7 +25,20 @@ const initialState = {
 const genresFilmSlice = createSlice({
     name: 'genresFilmSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        sortByVote_averageG: (state, action) => {
+            state.genreFilmsArr.results = state.genreFilmsArr.results.slice().sort((a, b) => b.vote_average - a.vote_average);
+        },
+        sortByPopularityG: (state, action) => {
+            state.genreFilmsArr.results = state.genreFilmsArr.results.slice().sort((a, b) => b.popularity - a.popularity);
+        },
+        sortByDateG: (state, action) => {
+            state.genreFilmsArr.results = state.genreFilmsArr.results.slice().sort((a, b) => b.release_date > a.release_date ? 1 : -1);
+        },
+        sortByOriginalTitleG: (state, action) => {
+            state.genreFilmsArr.results = state.genreFilmsArr.results.slice().sort((a, b) => a.original_title > b.original_title ? 1 : -1);
+        },
+    },
     extraReducers: {
         [getAllGenresFilms.pending]: (state, action) => {
             state.status = 'Loading...'
@@ -45,5 +57,6 @@ const genresFilmSlice = createSlice({
     }
 });
 
+export const {sortByVote_averageG, sortByDateG, sortByOriginalTitleG, sortByPopularityG} = genresFilmSlice.actions;
 const genresFilmsReducer = genresFilmSlice.reducer;
 export default genresFilmsReducer;

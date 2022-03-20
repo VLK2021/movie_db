@@ -21,7 +21,6 @@ const MoviesList = () => {
     const page = 1;
     const dispatch = useDispatch();
 
-
     useEffect(() => {
         dispatch(getAllMovies(page))
     }, []);

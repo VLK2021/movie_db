@@ -25,7 +25,20 @@ const initialState = {
 const newMoviesSlice = createSlice({
     name: 'newMoviesSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        sortByVote_averageN: (state, action) => {
+            state.newMoviesArr.results = state.newMoviesArr.results.slice().sort((a, b) => b.vote_average - a.vote_average);
+        },
+        sortByPopularityN: (state, action) => {
+            state.newMoviesArr.results = state.newMoviesArr.results.slice().sort((a, b) => b.popularity - a.popularity);
+        },
+        sortByDateN: (state, action) => {
+            state.newMoviesArr.results = state.newMoviesArr.results.slice().sort((a, b) => b.release_date > a.release_date ? 1 : -1);
+        },
+        sortByOriginalTitleN: (state, action) => {
+            state.newMoviesArr.results = state.newMoviesArr.results.slice().sort((a, b) => a.original_title > b.original_title ? 1 : -1);
+        },
+    },
     extraReducers: {
         [getAllNewMovies.pending]: (state, action) => {
             state.status = 'Loading...'
@@ -44,5 +57,6 @@ const newMoviesSlice = createSlice({
     }
 });
 
+export const {sortByVote_averageN, sortByPopularityN, sortByDateN, sortByOriginalTitleN} = newMoviesSlice.actions;
 const newMoviesReducer = newMoviesSlice.reducer;
 export default newMoviesReducer;

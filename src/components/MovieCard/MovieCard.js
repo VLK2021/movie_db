@@ -6,7 +6,7 @@ import './MovieCard.css'
 
 
 const MovieCard = ({movie}) => {
-    const {id, poster_path, original_title, vote_average, release_date} = movie;
+    const {id, poster_path, original_title, vote_average, release_date, title} = movie;
 
     const setVoteClass = (vote) => {
         if (vote >= 8) {

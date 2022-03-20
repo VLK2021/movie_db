@@ -1,11 +1,18 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import {getAllNewMovies} from "../../store/slices/newMovies.slice";
+import {
+    getAllNewMovies,
+    sortByVote_averageN,
+    sortByDateN,
+    sortByOriginalTitleN,
+    sortByPopularityN
+} from "../../store/slices/newMovies.slice";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import {Pagination} from "../../Pagination/Pagination";
 import './NewMoviesStyle.css';
 import Carousel from "../../components/CarouselBox/CarouselBox";
+
 
 const NewMovies = () => {
 
@@ -19,12 +26,20 @@ const NewMovies = () => {
         dispatch(getAllNewMovies(page))
     }, []);
 
-
     return (
         <div className="newMovies">
             {error && <h1>{error}</h1>}
 
             <Carousel/>
+
+            <div className="sort">
+                <label className="sort-labelText">Sort By:
+                    <button onClick={() => dispatch(sortByVote_averageN(newMoviesArr.results))}>VoteEverage</button>
+                    <button onClick={() => dispatch(sortByPopularityN(newMoviesArr.results))}>Popularity</button>
+                    <button onClick={() => dispatch(sortByDateN(newMoviesArr.results))}>Date</button>
+                    <button onClick={() => dispatch(sortByOriginalTitleN(newMoviesArr.results))}>Title</button>
+                </label>
+            </div>
 
             <div className="newMovies-movies">
                 {results && results.map(mov => <MovieCard key={mov.id} movie={mov}/>)}
