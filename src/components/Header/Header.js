@@ -5,16 +5,26 @@ import {useSelector} from "react-redux";
 
 import './HeaderStyle.css';
 import LoginForm from "../LoginForm/LoginForm";
+import {useNavigate} from "react-router-dom";
 
 
 const Header = () => {
     const [showLoginForm, setShowLoginForm] = useState(false);
+    const navigate = useNavigate();
 
     const {user} = useSelector(store => store.getUsersAll);
     const {UserName} = user;
 
     const showLogin = () => {
         setShowLoginForm(showLogin => !showLogin);
+    }
+
+    const logout = () => {
+        alert('ще не придумав!!!')
+    }
+
+    const goUserPage = () => {
+        navigate('/user');
     }
 
     return (
@@ -46,7 +56,11 @@ const Header = () => {
                 </a>
             </div>
 
-            <div className={'login'} onClick={showLogin}>{user.UserName ? UserName : 'login'}</div>
+            <div className={'header-logout'}>
+                <div className={'login'} onClick={showLogin}>{user.UserName ?
+                    <div onClick={goUserPage}>{UserName}</div> : 'login'}</div>
+                {UserName && <button className={'header-logout-btn'} onClick={logout}>logout</button>}
+            </div>
             <div className={'header-loginForm'}>{showLoginForm && <LoginForm/>}</div>
         </div>
     );

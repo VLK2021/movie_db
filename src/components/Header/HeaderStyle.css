@@ -50,3 +50,21 @@
     right: 350px;
     top: 30px;
 }
+
+.header-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logout-btn{
+    height: 1.5rem;
+    width: 5rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
