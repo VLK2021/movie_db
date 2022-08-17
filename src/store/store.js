@@ -6,6 +6,7 @@ import genresReducer from "./slices/genres.slice";
 import genresFilmsReducer from "./slices/genresFilms.slice";
 import searchReducer from "./slices/search.slice";
 import newMoviesReducer from "./slices/newMovies.slice";
+import usersReducer from "./slices/users.slice";
 
 const store = configureStore({
     reducer: {
@@ -15,6 +16,7 @@ const store = configureStore({
         genresFilms: genresFilmsReducer,
         searchFilm: searchReducer,
         newMoviesR: newMoviesReducer,
+        getUsersAll: usersReducer,
     }
 });
 

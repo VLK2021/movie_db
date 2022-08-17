@@ -30,11 +30,23 @@
 }
 
 .icons-body {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     margin-right: 0.7rem;
     color: var(--var-footer-color);
 }
 
 .icons-body:hover {
     color: var(--var-a-hover);
+}
+
+.login {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-loginForm {
+    position: absolute;
+    right: 350px;
+    top: 30px;
 }

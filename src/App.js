@@ -1,14 +1,15 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 
+import './App.css';
 import Layout from "./Layout/Layout";
 import MoviesList from "./pages/MoviesList/MoviesList";
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
-import './App.css';
 import MovieGenres from "./pages/MovieGenres/MovieGenres";
 import GenresFilmsList from "./pages/GenresFilmsList/GenresFilmsList";
 import SearchFilms from "./pages/SearchFilms/SearchFilms";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import NewMovies from "./pages/NewMovies/NewMovies";
+import Users from "./components/Users/Users";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                     <Route path={'/search/:word/:id'} element={<MovieDetails/>}/>
                     <Route path={'/new_movies'} element={<NewMovies/>}/>
                     <Route path={'/new_movies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/user'} element={<Users/>}/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

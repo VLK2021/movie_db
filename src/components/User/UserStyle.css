@@ -1,0 +1,18 @@
+.user {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.user-btn {
+    height: 2rem;
+    width: 8rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 5rem;
+}
