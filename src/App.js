@@ -10,6 +10,7 @@ import SearchFilms from "./pages/SearchFilms/SearchFilms";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import NewMovies from "./pages/NewMovies/NewMovies";
 import Users from "./components/Users/Users";
+import Subscriptions from "./pages/Subscriptions/Subscriptions";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <Route path={'/new_movies'} element={<NewMovies/>}/>
                     <Route path={'/new_movies/:id'} element={<MovieDetails/>}/>
                     <Route path={'/user'} element={<Users/>}/>
+                    <Route path={'/subscriptions'} element={<Subscriptions/>}/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

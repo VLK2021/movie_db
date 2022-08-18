@@ -50,7 +50,8 @@ export default function LoginForm() {
                     userId: new Date().getTime(),
                     UserName: data.UserName,
                     userLogin: data.userLogin,
-                    userPassword: data.userPassword
+                    userPassword: data.userPassword,
+                    subscriptions: [],
                 }
             )
             console.log(defaultUsersList);
@@ -74,11 +75,9 @@ export default function LoginForm() {
         if (authMode === 'resetPassForm') {
             console.log('ще не придумав!)');
         }
-        alert(JSON.stringify(data));
+        // alert(JSON.stringify(data));
         reset();
     }
-
-
 
 
     // render SignIn form

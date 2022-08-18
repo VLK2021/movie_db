@@ -10,7 +10,7 @@ import {
     sortByOriginalTitleG
 } from "../../store/slices/genresFilms.slice";
 import MovieCard from "../../components/MovieCard/MovieCard";
-import {Pagination} from "../../Pagination/Pagination";
+import {Pagination} from "../../Pagination";
 import './GenresFilmsListStyle.css';
 
 

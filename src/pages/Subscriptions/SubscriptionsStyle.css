@@ -1,0 +1,44 @@
+.subscriptions {
+
+}
+
+.subscriptionsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: var(--var-color-btn);
+}
+
+.genr {
+    width: 10rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    height: 2rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    font-style: italic;
+}
+
+.subscriptions-text {
+    text-align: center;
+    color: var(--var-color-btn);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+h5 {
+    text-align: center;
+    color: var(--var-color-btn);
+}
+

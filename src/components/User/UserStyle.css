@@ -4,18 +4,18 @@
     text-align: center;
 }
 
-h1{
+h1 {
     font-weight: bold;
 }
 
-.user-logPas{
+.user-logPas {
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--var-color-btn);
 }
 
-.user-log-login{
+.user-log-login {
     margin-right: 3rem;
 }
 
@@ -30,4 +30,60 @@ h1{
     font-weight: bold;
     font-style: italic;
     margin-top: 5rem;
+}
+
+.user-block-subscriptions {
+    width: 50%;
+    margin-top: 3rem;
+}
+
+.user-subscriptions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    color: var(--var-color-btn);
+    margin-top: 1rem;
+}
+
+.user-subscriptions-text {
+    text-align: center;
+    color: var(--var-color-btn);
+    text-transform: uppercase;
+}
+
+.user-subscriptions-btn {
+    height: 1.7rem;
+    width: 6rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+.subscriptions-goBack-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscriptions-goBack {
+    height: 2rem;
+    width: 15rem;
+    color: var(--var-color-btn);
+    background: var(--var-bg-btn);
+    border-radius: 1rem;
+    box-shadow: var(--var-box-shedow-header);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 5rem;
+    font-size: 1.2rem;
 }
