@@ -7,12 +7,4 @@ export const defaultUsersList = [
         subscriptions: ['Actions', 'Comedy', 'Crime'],
         streamingService: ['light'],
     },
-    {
-        userId: 2,
-        UserName: 'Valentyna',
-        userLogin: 'general@gmail.com',
-        userPassword: '222',
-        subscriptions: ['War', 'Thriller', 'Romance'],
-        streamingService: ['optimum'],
-    },
 ];

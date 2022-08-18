@@ -1,12 +1,10 @@
 import React from 'react';
 
-
 import {YOUTUBE_URL} from "../../constants/youtube.url";
-
 import './VideosStyle.css';
 
-const Videos = ({video}) => {
 
+const Videos = ({video}) => {
     const {key, name} = video;
 
     return (

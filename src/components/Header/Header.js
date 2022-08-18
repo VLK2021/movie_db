@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faYoutube, faGithub, faInstagram, faFacebook, faFigma} from '@fortawesome/free-brands-svg-icons';
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 import './HeaderStyle.css';
 import LoginForm from "../LoginForm/LoginForm";
-import {useNavigate} from "react-router-dom";
 
 
 const Header = () => {

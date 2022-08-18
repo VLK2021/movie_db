@@ -27,18 +27,34 @@ const User = () => {
                 <h4>Password: {userPassword}</h4>
             </div>
 
-            <div className={'user-block-subscriptions'}>
-                <div className={'user-subscriptions-text'}>subscriptions</div>
+            <div className={'subStrim'}>
 
-                <div className={'user-subscriptions'}>{
-                    subscriptions && subscriptions.map(value =>
-                        <NavLink to={'/genres/'} key={new Date().getTime()}>
-                            <div key={new Date().getTime()}>{value}</div>
-                        </NavLink>)
-                }</div>
+                <div className={'user-block-subscriptions'}>
+                    <div className={'user-subscriptions-text'}>subscriptions</div>
 
-                <button className={'user-subscriptions-btn'} onClick={goToSubscription}>watch all</button>
+                    <div className={'user-subscriptions'}>{
+                        subscriptions && subscriptions.map(value =>
+                            <NavLink to={'/genres/'} key={new Date().getTime()}>
+                                <div key={new Date().getTime()}>{value}</div>
+                            </NavLink>)
+                    }</div>
+
+
+                    <button className={'user-subscriptions-btn'} onClick={goToSubscription}>watch all</button>
+                </div>
+
+                <div className={'StreamingService'}>
+                    <div className={'user-streamingService-text'}>streamingService</div>
+
+                    <div className={'user-subscriptions'}>
+                        тут повинен бути список стрімів або тарифних планів
+                    </div>
+
+                    <button className={'user-subscriptions-btn'}>watch all</button>
+                </div>
+
             </div>
+
 
             <button className={'user-btn'} onClick={logout}>logout</button>
         </div>
