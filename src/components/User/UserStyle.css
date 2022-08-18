@@ -4,6 +4,21 @@
     text-align: center;
 }
 
+h1{
+    font-weight: bold;
+}
+
+.user-logPas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var-color-btn);
+}
+
+.user-log-login{
+    margin-right: 3rem;
+}
+
 .user-btn {
     height: 2rem;
     width: 8rem;

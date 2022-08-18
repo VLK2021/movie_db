@@ -74,23 +74,12 @@ export default function LoginForm() {
         if (authMode === 'resetPassForm') {
             console.log('ще не придумав!)');
         }
-        // alert(JSON.stringify(data));
+        alert(JSON.stringify(data));
         reset();
     }
 
 
-    //     if (authMode === 'signin' ){
-    //
-    //         dispatch(changeDataUserLogin(data.userLogin))
-    //             navigate('/users')
-    //         setShowLoginForm(false);
-    //     }
-    //     if (authMode === 'resetPassForm'){
-    //         console.log('ще не придумав!)');
-    //     }
-    //     // alert(JSON.stringify(data));
-    //     reset();
-    // }
+
 
     // render SignIn form
     if (authMode === "signin") {

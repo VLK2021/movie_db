@@ -4,7 +4,8 @@ export const defaultUsersList = [
         UserName: 'Volodymyr',
         userLogin: 'admin@gmail.com',
         userPassword: '1111',
-        subscriptions: ['Actions','Comedy', 'Crime'],
+        subscriptions: ['Actions', 'Comedy', 'Crime'],
+        streamingService: ['light'],
     },
     {
         userId: 2,
@@ -12,5 +13,6 @@ export const defaultUsersList = [
         userLogin: 'general@gmail.com',
         userPassword: '222',
         subscriptions: ['War', 'Thriller', 'Romance'],
+        streamingService: ['optimum'],
     },
 ];
