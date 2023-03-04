@@ -20,6 +20,7 @@ const SearchFilms = () => {
 
     const dispatch = useDispatch();
 
+
     return (
         <div className="searchFilms">
             {error && <h1>{error}</h1>}

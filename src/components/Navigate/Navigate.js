@@ -16,9 +16,9 @@ const Navigate = () => {
 
     const onsubmitForm = (e) => {
         e.preventDefault()
-        let word = e.target.nameFilm.value
-        navigate(`/search/${word}`)
-        dispatch(getAllSearch({word, page}))
+        let word = e.target.nameFilm.value;
+        navigate(`/search/${word}`);
+        dispatch(getAllSearch({word, page}));
         e.target.nameFilm.value = '';
     }
 

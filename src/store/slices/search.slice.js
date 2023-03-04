@@ -7,7 +7,7 @@ export const getAllSearch = createAsyncThunk(
     'searchSlice/getAllSearch',
     async ({word, page}, {rejectWithValue}) => {
         try {
-            const searchF = await moviesService.getSearch(word, page)
+            const searchF = await moviesService.getSearch(word, page);
             return searchF
         } catch (e) {
             return rejectWithValue(e.message)
