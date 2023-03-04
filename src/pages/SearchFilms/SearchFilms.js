@@ -15,7 +15,7 @@ import './SearchFilmsStyle.css';
 
 const SearchFilms = () => {
 
-    const {searchArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.searchFilm);
+    const {searchArr, error, currentPage, totalMoviesPage} = useSelector(store => store.searchFilm);
     const {results} = searchArr;
 
     const dispatch = useDispatch();
