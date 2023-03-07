@@ -7,9 +7,11 @@ import {getAllGenresFilms} from "../store/slices/genresFilms.slice";
 import {getAllSearch} from "../store/slices/search.slice";
 import './PaginationStyle.css';
 import {getAllNewMovies} from "../store/slices/newMovies.slice";
+import {useTranslation} from "react-i18next";
 
 
 export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
+    const {t} = useTranslation();
 
     const [startPage, setStartPage] = useState(1);
     const [endPage, setEndPage] = useState(10);
@@ -55,7 +57,7 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
 
     return (
         <div className="pagination">
-            <button onClick={onRemovePages} className="pagination-btn">Previous</button>
+            <button onClick={onRemovePages} className="pagination-btn">{t('movie-pagination-previous')}</button>
 
             {
                 pages.map(item => <div key={item}
@@ -65,7 +67,7 @@ export const Pagination = ({totalMoviesPage, currentPage, pageChange}) => {
                                        }}>{item}</div>)
             }
 
-            <button onClick={onAddNextPages} className="pagination-btn">Next</button>
+            <button onClick={onAddNextPages} className="pagination-btn">{t('movie-pagination-next')}</button>
         </div>
     );
 };

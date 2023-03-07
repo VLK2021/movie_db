@@ -12,10 +12,11 @@ import MovieCard from "../../components/MovieCard/MovieCard";
 import {Pagination} from "../../Pagination/Pagination";
 import './NewMoviesStyle.css';
 import Carousel from "../../components/CarouselBox/CarouselBox";
+import {useTranslation} from "react-i18next";
 
 
 const NewMovies = () => {
-
+const {t} = useTranslation();
     const {newMoviesArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.newMoviesR);
     const {results} = newMoviesArr;
 
@@ -33,11 +34,11 @@ const NewMovies = () => {
             <Carousel/>
 
             <div className="sort">
-                <label className="sort-labelText">Sort By:
-                    <button onClick={() => dispatch(sortByVote_averageN(newMoviesArr.results))}>VoteEverage</button>
-                    <button onClick={() => dispatch(sortByPopularityN(newMoviesArr.results))}>Popularity</button>
-                    <button onClick={() => dispatch(sortByDateN(newMoviesArr.results))}>Date</button>
-                    <button onClick={() => dispatch(sortByOriginalTitleN(newMoviesArr.results))}>Title</button>
+                <label className="sort-labelText">{t('movie-movieList-sortBy')}
+                    <button onClick={() => dispatch(sortByVote_averageN(newMoviesArr.results))}>{t('movie-movieList-voteEverage')}</button>
+                    <button onClick={() => dispatch(sortByPopularityN(newMoviesArr.results))}>{t('movie-movieList-popularity')}</button>
+                    <button onClick={() => dispatch(sortByDateN(newMoviesArr.results))}>{t('movie-movieList-date')}</button>
+                    <button onClick={() => dispatch(sortByOriginalTitleN(newMoviesArr.results))}>{t('movie-movieList-title')}</button>
                 </label>
             </div>
 

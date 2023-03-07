@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 import {
     getAllMovies,
@@ -15,7 +16,7 @@ import "./MoviesList.css";
 
 
 const MoviesList = () => {
-
+    const {t} = useTranslation();
     const {moviesArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.movies);
     const {results} = moviesArr;
     const page = 1;
@@ -32,11 +33,11 @@ const MoviesList = () => {
             <CarouselBox/>
 
             <div className="sort">
-                <label className="sort-labelText">Sort By:
-                    <button onClick={() => dispatch(sortByVote_averageM(moviesArr.results))}>VoteEverage</button>
-                    <button onClick={() => dispatch(sortByPopularityM(moviesArr.results))}>Popularity</button>
-                    <button onClick={() => dispatch(sortByDateM(moviesArr.results))}>Date</button>
-                    <button onClick={() => dispatch(sortByOriginalTitleM(moviesArr.results))}>Title</button>
+                <label className="sort-labelText">{t('movie-movieList-sortBy')}
+                    <button onClick={() => dispatch(sortByVote_averageM(moviesArr.results))}>{t('movie-movieList-voteEverage')}</button>
+                    <button onClick={() => dispatch(sortByPopularityM(moviesArr.results))}>{t('movie-movieList-popularity')}</button>
+                    <button onClick={() => dispatch(sortByDateM(moviesArr.results))}>{t('movie-movieList-date')}</button>
+                    <button onClick={() => dispatch(sortByOriginalTitleM(moviesArr.results))}>{t('movie-movieList-title')}</button>
                 </label>
             </div>
 

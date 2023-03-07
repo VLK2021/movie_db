@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 import {
     getAllGenresFilms,
@@ -15,6 +16,7 @@ import './GenresFilmsListStyle.css';
 
 
 const GenresFilmsList = () => {
+    const {t} = useTranslation();
     const page = useSelector(store => store.genresFilms.currentPage);
     const {genreFilmsArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.genresFilms);
     const {results} = genreFilmsArr;
@@ -31,11 +33,11 @@ const GenresFilmsList = () => {
             {error && <h1>{error}</h1>}
 
             <div className="sort">
-                <label className="sort-labelText">Sort By:
-                    <button onClick={() => dispatch(sortByVote_averageG(genreFilmsArr.results))}>VoteEverage</button>
-                    <button onClick={() => dispatch(sortByPopularityG(genreFilmsArr.results))}>Popularity</button>
-                    <button onClick={() => dispatch(sortByDateG(genreFilmsArr.results))}>Date</button>
-                    <button onClick={() => dispatch(sortByOriginalTitleG(genreFilmsArr.results))}>Title</button>
+                <label className="sort-labelText">{t('movie-movieList-sortBy')}
+                    <button onClick={() => dispatch(sortByVote_averageG(genreFilmsArr.results))}>{t('movie-movieList-voteEverage')}</button>
+                    <button onClick={() => dispatch(sortByPopularityG(genreFilmsArr.results))}>{t('movie-movieList-popularity')}</button>
+                    <button onClick={() => dispatch(sortByDateG(genreFilmsArr.results))}>{t('movie-movieList-date')}</button>
+                    <button onClick={() => dispatch(sortByOriginalTitleG(genreFilmsArr.results))}>{t('movie-movieList-title')}</button>
                 </label>
             </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 
 import './NavigateStyle.css'
@@ -8,6 +9,7 @@ import {getAllSearch} from "../../store/slices/search.slice";
 
 
 const Navigate = () => {
+    const {t, i18n} = useTranslation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -25,9 +27,24 @@ const Navigate = () => {
         document.body.classList.toggle("lightTherm")
     }
 
+    const langHandler = (e) => {
+        i18n.changeLanguage(e.target.checked ? 'ua' : 'en')
+    }
+
 
     return (
         <div className='Navigate'>
+
+            <div className={'Navigate-language'}>
+                <p>en</p>
+
+                <div className="form-switch lan">
+                    <input className="form-check-input" type="checkbox" onChange={langHandler}/>
+                </div>
+
+                <p>ua</p>
+            </div>
+
             <div className="form-check form-switch toggle">
                 <input className="form-check-input"
                        type="checkbox"
@@ -37,15 +54,15 @@ const Navigate = () => {
 
             <div className="navigate-btn">
                 <NavLink to={'/'}>
-                    <button>Home</button>
+                    <button>{t('movie-nav-home')}</button>
                 </NavLink>
 
                 <NavLink to={'/genres'}>
-                    <button>All Genres</button>
+                    <button>{t('movie-nav-genres')}</button>
                 </NavLink>
 
                 <NavLink to={'/new_movies'}>
-                    <button>New Movies</button>
+                    <button>{t('movie-nav-newMovies')}</button>
                 </NavLink>
             </div>
 

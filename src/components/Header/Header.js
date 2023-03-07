@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faYoutube, faGithub, faInstagram, faFacebook, faFigma} from '@fortawesome/free-brands-svg-icons';
+import {useTranslation} from "react-i18next";
 
 import './HeaderStyle.css';
 
 
 const Header = () => {
-
+const {t} = useTranslation();
     return (
         <div className="header">
             <div className={'header-logo'}>
@@ -16,7 +17,7 @@ const Header = () => {
                     alt="logo"/>
                 </a>
             </div>
-            <h1 className={'header-text'}>THE MOVIE DB</h1>
+            <h1 className={'header-text'}>{t('movie-header-title')}</h1>
 
             <div className="icons">
                 <a href={'https://www.youtube.com/'} target={'_blank'}>

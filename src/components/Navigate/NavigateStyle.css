@@ -54,3 +54,26 @@
 .Navigate-form input:hover {
     border: 0.1rem solid var(--var-color-btn);
 }
+
+.Navigate-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    margin-right: 7rem;
+}
+
+.Navigate-language > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var-header-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.lan {
+    text-align: center;
+}

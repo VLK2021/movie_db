@@ -1,0 +1,13 @@
+{
+  "movie-header-title": "the movie db",
+  "movie-nav-home": "Home",
+  "movie-nav-genres": "All genres",
+  "movie-nav-newMovies": "New Movies",
+  "movie-movieList-sortBy": "Sort By:",
+  "movie-movieList-voteEverage": "VoteEverage:",
+  "movie-movieList-popularity": "Popularity",
+  "movie-movieList-date": "Date",
+  "movie-movieList-title": "Title",
+  "movie-pagination-previous": "Previous",
+  "movie-pagination-next": "Next"
+}

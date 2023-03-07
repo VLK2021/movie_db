@@ -1,0 +1,13 @@
+{
+  "movie-header-title": "фільми світу",
+  "movie-nav-home": "Головна",
+  "movie-nav-genres": "Жанри",
+  "movie-nav-newMovies": "Нові фільми",
+  "movie-movieList-sortBy": "Сортувати за:",
+  "movie-movieList-voteEverage": "Рейтингом",
+  "movie-movieList-popularity": "Популярністтю",
+  "movie-movieList-date": "Датою",
+  "movie-movieList-title": "Заголовком",
+  "movie-pagination-previous": "Попередня",
+  "movie-pagination-next": "Наступна"
+}
