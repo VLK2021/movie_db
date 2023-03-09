@@ -1,6 +1,6 @@
 .Navigate {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0 0 1.2rem 0;
 }
@@ -8,6 +8,16 @@
 .toggle {
     margin-top: 3rem;
     margin-right: 15rem;
+}
+
+.sunMoon > .toggle, .sun, .moon {
+    margin: 3rem 0 0 0;
+}
+
+.sun, .moon {
+    color: var(--var-color-btn);
+    padding: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .navigate-btn {
@@ -76,4 +86,10 @@
 
 .lan {
     text-align: center;
+}
+
+.sunMoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

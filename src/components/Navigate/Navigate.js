@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {useTranslation} from "react-i18next";
+import {BsSun, BsMoonFill} from "react-icons/bs";
 
 
 import './NavigateStyle.css'
@@ -45,11 +46,17 @@ const Navigate = () => {
                 <p>ua</p>
             </div>
 
-            <div className="form-check form-switch toggle">
-                <input className="form-check-input"
-                       type="checkbox"
-                       onChange={event => onchange(event.target.value)}
-                />
+            <div className={'sunMoon'}>
+                <div className={'moon'}><BsMoonFill/></div>
+
+                <div className="form-check form-switch toggle">
+                    <input className="form-check-input"
+                           type="checkbox"
+                           onChange={event => onchange(event.target.value)}
+                    />
+                </div>
+
+                <div className={'sun'}><BsSun/></div>
             </div>
 
             <div className="navigate-btn">
