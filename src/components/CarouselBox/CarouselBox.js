@@ -14,8 +14,9 @@ const CarouselBox = () => {
     const page = currentPage;
 
     const dispatch = useDispatch();
+
     useEffect(() => {
-        dispatch(getAllNewMovies(page))
+        dispatch(getAllNewMovies({page}))
     }, []);
 
     const imgCarousel1 = useMemo(() => results ? results[0].backdrop_path : null, [results]);

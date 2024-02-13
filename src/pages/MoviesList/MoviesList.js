@@ -17,13 +17,13 @@ import "./MoviesList.css";
 
 const MoviesList = () => {
     const {t} = useTranslation();
-    const {moviesArr, status, error, currentPage, totalMoviesPage} = useSelector(store => store.movies);
+    const {moviesArr, error, currentPage, totalMoviesPage} = useSelector(store => store.movies);
     const {results} = moviesArr;
     const page = 1;
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getAllMovies(page))
+        dispatch(getAllMovies({page}))
     }, []);
 
     return (
